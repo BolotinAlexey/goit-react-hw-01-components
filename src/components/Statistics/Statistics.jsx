@@ -1,8 +1,8 @@
 import propTypes from 'prop-types';
 import StatisticElement from './StatisticElement/StatisticElement';
 import StatisticTitle from './StatisticTitle/StatisticTitle';
-import getRandomColor from './getRandomColor';
 import css from './Statistics.module.css';
+import { Item } from './Item.styled.js';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -10,16 +10,9 @@ export default function Statistics({ title, stats }) {
       <StatisticTitle title={title} />
       <ul className={css.statList}>
         {stats.map(({ id, label, percentage }) => (
-          <li
-            key={id}
-            className={css.item}
-            style={{
-              flexBasis: `${100 / stats.length}%`,
-              backgroundColor: getRandomColor(),
-            }}
-          >
+          <Item key={id} className={css.item}>
             <StatisticElement label={label} percentage={percentage} />
-          </li>
+          </Item>
         ))}
       </ul>
     </section>
