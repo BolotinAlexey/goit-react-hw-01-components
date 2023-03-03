@@ -1,15 +1,23 @@
 import propTypes from 'prop-types';
 import StatisticElement from './StatisticElement/StatisticElement';
+import StatisticTitle from './StatisticTitle/StatisticTitle';
+import getRandomColor from './getRandomColor';
 import css from './Statistics.module.css';
 
-export default function Statistics({ stats }) {
+export default function Statistics({ title, stats }) {
   return (
     <section className={css.statistics}>
-      {/* <h2 className={css.title}>{title}</h2> */}
-
+      <StatisticTitle title={title} />
       <ul className={css.statList}>
         {stats.map(({ id, label, percentage }) => (
-          <li key={id} className={css.item}>
+          <li
+            key={id}
+            className={css.item}
+            style={{
+              flexBasis: `${100 / stats.length}%`,
+              backgroundColor: getRandomColor(),
+            }}
+          >
             <StatisticElement label={label} percentage={percentage} />
           </li>
         ))}
@@ -17,3 +25,8 @@ export default function Statistics({ stats }) {
     </section>
   );
 }
+
+// Statistics.propTypes = {
+//   title: propTypes.string,
+//   stats: propTypes.array,
+// };

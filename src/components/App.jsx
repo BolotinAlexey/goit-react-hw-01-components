@@ -8,6 +8,7 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
+        gap: '10px',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -21,6 +22,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
     </div>
   );
