@@ -14,6 +14,7 @@ export const App = () => {
         height: '100vh',
         display: 'flex',
         gap: '10px',
+        flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,

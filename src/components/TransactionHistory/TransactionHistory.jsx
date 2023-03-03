@@ -1,7 +1,10 @@
+import PropTypes from 'prop-types';
+import css from './TransactionHistory.module.css';
 import OneTransaction from './OneTransaction/OneTransaction';
+
 export default function TransactionHistory({ items }) {
   return (
-    <table class="transaction-history">
+    <table className={css.transactionHistory}>
       <thead>
         <tr>
           <th>Type</th>
@@ -13,7 +16,7 @@ export default function TransactionHistory({ items }) {
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
           <OneTransaction
-            id={id}
+            key={id}
             type={type}
             amount={amount}
             currency={currency}
@@ -23,3 +26,10 @@ export default function TransactionHistory({ items }) {
     </table>
   );
 }
+
+TransactionHistory.propTypes = {
+  id: PropTypes.string,
+  type: PropTypes.string,
+  amount: PropTypes.number,
+  currency: PropTypes.string,
+};
