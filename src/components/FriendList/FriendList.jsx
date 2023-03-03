@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem/FriendListItem';
 import css from './FriendList.module.css';
-import friends from 'friends';
 
 export default function FriendList({ friends }) {
   return (
@@ -17,3 +16,10 @@ export default function FriendList({ friends }) {
     </ul>
   );
 }
+
+FriendList.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+  id: PropTypes.string,
+};

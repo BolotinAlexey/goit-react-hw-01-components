@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './StatisticElement.module.css';
 
 export default function StatisticElement({ label, percentage }) {
@@ -11,6 +11,6 @@ export default function StatisticElement({ label, percentage }) {
 }
 
 StatisticElement.propTypes = {
-  label: propTypes.string,
-  percentage: propTypes.number,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
 };

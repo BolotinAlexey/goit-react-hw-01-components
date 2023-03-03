@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import StatisticElement from './StatisticElement/StatisticElement';
 import StatisticTitle from './StatisticTitle/StatisticTitle';
 import css from './Statistics.module.css';
@@ -20,6 +20,6 @@ export default function Statistics({ title, stats }) {
 }
 
 Statistics.propTypes = {
-  title: propTypes.string,
-  stats: propTypes.array,
+  title: PropTypes.string,
+  stats: PropTypes.array,
 };
