@@ -26,7 +26,7 @@ export default function Statistics({ title, stats }) {
   );
 }
 
-// Statistics.propTypes = {
-//   title: propTypes.string,
-//   stats: propTypes.array,
-// };
+Statistics.propTypes = {
+  title: propTypes.string,
+  stats: propTypes.array,
+};
