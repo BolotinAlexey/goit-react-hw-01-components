@@ -11,10 +11,11 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+        // height: '100vh',
         display: 'flex',
-        gap: '10px',
-        flexWrap: 'wrap',
+        flexDirection: 'column',
+        gap: '30px',
+        // flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
