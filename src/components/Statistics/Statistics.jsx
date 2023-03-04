@@ -4,7 +4,7 @@ import StatisticTitle from './StatisticTitle/StatisticTitle';
 import css from './Statistics.module.css';
 import { Item } from './Item.styled.js';
 
-export default function Statistics({ title, stats }) {
+function Statistics({ title, stats }) {
   return (
     <section className={css.statistics}>
       <StatisticTitle title={title} />
@@ -23,3 +23,5 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.array,
 };
+
+export default Statistics;

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './StatisticElement.module.css';
 
-export default function StatisticElement({ label, percentage }) {
+function StatisticElement({ label, percentage }) {
   return (
     <>
       <span className={css.label}>{label}</span>
@@ -14,3 +14,5 @@ StatisticElement.propTypes = {
   label: PropTypes.string,
   percentage: PropTypes.number,
 };
+
+export default StatisticElement;
