@@ -13,8 +13,9 @@ export const Item = styled.li`
   flex-direction: column;
   align-items: center;
   gap: 0.2em;
-  width: 20%;
   padding: 0.2em;
+
+  width: ${({ length }) => `${100 / length}%`};
 `;
 
 /* width: ${100 / stats.length}%; */

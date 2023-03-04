@@ -10,7 +10,7 @@ export default function Statistics({ title, stats }) {
       <StatisticTitle title={title} />
       <ul className={css.statList}>
         {stats.map(({ id, label, percentage }) => (
-          <Item key={id} className={css.item}>
+          <Item key={id} length={stats.length}>
             <StatisticElement label={label} percentage={percentage} />
           </Item>
         ))}
