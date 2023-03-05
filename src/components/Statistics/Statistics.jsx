@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import StatisticElement from './StatisticElement/StatisticElement';
-import StatisticTitle from './StatisticTitle/StatisticTitle';
 import css from './Statistics.module.css';
 import { Item } from './Item.styled.js';
 
 function Statistics({ title, stats }) {
   return (
     <section className={css.statistics}>
-      <StatisticTitle title={title} />
+      {title && <h2 className={css.title}>{title}</h2>}
       <ul className={css.statList}>
         {stats.map(({ id, label, percentage }) => (
           <Item key={id} length={stats.length}>
